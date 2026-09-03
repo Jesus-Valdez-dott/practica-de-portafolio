@@ -1,31 +1,101 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Mi Primer Servidor Web</title>
-</head>
-<body>
-<h1>Sobre mi</h1>
-<img src="images.jpg" alt="" width="200">
-<h3>Presentacion</h3>
-<p>Hola, mi nombre es Jesus Alfonso, soy estudiante de ISW de ITSON y estoy aprendiendo desarrollo web.</p>
+    <head>
+        <meta charset="UTF-8">
+        <title>Mi Primer Servidor Web</title>
+        <meta name="viewport" content="width, initial-scale=1.0">
+        <meta name="description" content="portafolio personal de un ingeniero en software">
+        <meta name="keyword" content="portafolio, ingeniero enm software, dev web">
+        <meta name="author" content="Jesus Alfonso Valdez Alarcon">
+        <meta name="robots" content="index, follow">
+        <link rel="icon" type="image/ico" href="icono.ico">
 
-<h3>Datos personales</h3>
-<ul>
-    <li>Nombre: Jesus Alfonso</li>
-    <li>Edad: 21 años</li>
-    <li>Correo: jesus.valdez253244@potros.itson.edu.mx</li>
-</ul>
+    </head>
 
-<h3>Hobbies</h3>
-<ul>
-    <li>Jugar videojuegos</li>
-    <li>escuchar musica</li>
-    <li>dibujar</li>
-</ul>
+    <body>
+        <header>
+            <h1>Jesus Alfonso Valdez Alarcon</h1>
 
-<h3>Objetivo</h3>
-<p>Mi objetivo es aprender desarrollo web y poder crear aplicaciones web funcionales y atractivas.</p>
-    
-</body>
+            <p>ingeniero en software</p>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="hobbies.html">Mis hobbies</a>
+            </nav>
+
+            <nav>
+                <a href="#Sobre mi">Sobre mi</a>
+                <a href="#habilidades">Habilidades</a>
+                <a href="#formacion">Formacion</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </header>
+
+        <main>
+            <article></article>
+
+            <section id="Sobre mi">
+                <h2>Sobre mi</h2>
+
+                <p>Hola me llamo Jesus Alfonso, actualmente cursando la carrera de ingenieria en software</p>
+
+                <img  src="images/" alt="Foto de jesus valdez" width="100px">
+            </section>
+            <section id="habilidades">
+                <h2>Habilidades</h2>
+                <p>Tcenologias y area de dominio</p>
+                <p>java, python, mysql, mongo, html</p>
+            </section>
+            <section id="formacion">
+                <h2>Formacion</h2>
+
+                <p>areas de interes (lista desordenada)</p>
+                <ul>
+                    <li>Bases de datos</li>
+                    <li>Seguridad informatica</li>
+                    <li>Redes</li>
+                </ul>
+
+                <p>(lista desordenada y ordenada)</p>
+                <ul>
+                    <li>
+                        Frontend
+                        <ol>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JS</li>
+                        </ol>
+                    </li>
+                    <li>
+                        Backend
+                        <ol>
+                            <li>JAVA</li>
+                            <li>C#</li>
+                            <li>Python</li>
+                        </ol>
+                    </li>
+                </ul>
+            </section>
+            <section id="proyectos">
+                <h2>Proyectos</h2>
+
+                <p>areas de interes (lista desordenada)</p>
+                <ol>
+                    <li>Bases de datos</li>
+                    <li>Seguridad informatica</li>
+                    <li>Redes</li>
+                </ol>
+            </section>
+            <section id="contacto">
+                <h2>Contacto</h2>
+            </section>
+
+            <aside></aside>
+        </main>
+
+        <footer>
+        </footer>
+    </body>
+
 </html>
