@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo flexbox</title>
+    <meta name="viewport" content="width, initial-scale=1.0">
+
+
+    <style>
+        .contenedor{
+            border: 2px solid black;
+            padding: 10px;
+            background-color: #e2f0ff;
+            display: flex;
+            gap: 15px;
+            height: 180px;
+            justify-content: center; /*este los alinea horizontalmente*/
+            align-items: center; /*este los alinea verticalmente*/
+            flex-direction: column;
+        }
+        .caja{
+            width: 80px;
+            height: 60px;
+            background-color: #1e3a8a;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div  class="caja">1</div>
+        <div class="caja">2</div>
+        <div class="caja">3</div>
+        <div class="caja">4</div>
+    </div>
+</body>
+</html>

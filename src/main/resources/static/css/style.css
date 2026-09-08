@@ -1,17 +1,120 @@
 body{
     font-family: system-ui, -apple-system, sans-serif;
 
-    background-color: #F4F6F8;
+    background-color: var(--bg-color);
+
+    color: var(--text-color);
 
     line-height: 1.6;
 
     margin: 20px 10px 15px 5px;
 
     padding: 20px 10px 15px 5px;
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+/*
+unidades de medida
+    px: unidad de medida absoluta
+    %: relativo al contenedor padre
+    vw: relativo al ancho total de la pantalla del navegador
+    vh: relativo al alto total del navegador
+    dvh: relativo al tamaño de la fuente raiz
+    em: relativo a la fuente del dispositivo
+    fr: es una fraccion pero de un grid
+    rem: relativo igual a la fuente del dispositivo y al tamaño del contenedor
+*/
+
+:root{
+    --primary-color: #0056b3;
+    --secondary-color: #e2f0ff;
+    --text-color: #333;
+    --border-radius: 8px;
+    --spacing: 20px;
+    --bg-color: #f4f4f9;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header{
+    background-color: var(--primary-color);
+    color:white;
+    padding: var(--spacing);
+    text-align: center;
+}
+
+header h1{
+    color:  white;
+    margin-bottom: 5px;
+}
+
+nav{
+    display:  flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/*
+pseudo clases
+        :hover= mouse encima
+        :active = cuando esta presionado un click
+        :focus = mientras el elemento tiene el foco cuando le haces clik o lo seleccionas con el tab
+        :visited = enlace ya visitado
+        :checked = radio o checkbox marcado
+        :disable = para cuando el elemento esta deshabilitado
+
+        :first-child = primer hijo del elemento
+        :last-child = ultimo elemento
+        :nth-child(n) por patron numerico
+
+pseudo elementos
+        ::before: injecta contenido antes
+        ::after: injecta contenido despues
+        :: first.-letter: para la primera letra
+*/
+
+main {
+    display: grid;
+    grid-template-rows: 1fr;
+    gap: var(--spacing);
+    padding: var(--spacing);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+section{
+    background-color: #fff;
+    padding: var(--spacing);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 h1, h2, h3 {
   color: #1e3a8a; 
+}
+
+.foto-perfil{
+    float: right;
+    margin: 15px;
+    border-radius: 50%;
+    border: 3px solid var(--primary-color);
 }
 
 p, .subtitulo {
@@ -19,7 +122,7 @@ p, .subtitulo {
 }
 
 #sobre_mi, #formacion, #habilidades, #proyectos, #contacto{
-    background-color: #dfcaa7;
+    background-color: #f4e4d1;
     padding: 20px 10px 15px 5px;
     margin: 20px 10px 15px 5px;
     border-radius: 8px;
