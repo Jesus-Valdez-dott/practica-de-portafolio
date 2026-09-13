@@ -1,19 +1,103 @@
-body{
-    font-family: system-ui, -apple-system, sans-serif;
+:root {
+  --fondo-principal: #f8fafc; 
+  --fondo-tarjeta: #ffffff;
+  --texto-principal: #0f172a; 
+  --texto-secundario: #64748b;
+  --color-acento: #3b82f6;
+  --color-acento-hover: #2563eb;
+  --spacing: 20px;     
+}
 
-    background-color: var(--bg-color);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    color: var(--text-color);
+body {
+  background-color: var(--fondo-principal);
+  color: var(--texto-principal);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6; 
+}
 
-    line-height: 1.6;
+h1, h2, h3 {
+  color: var(--texto-principal);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
 
-    margin: 20px 10px 15px 5px;
+p {
+  color: var(--texto-secundario);
+  margin-bottom: 1.5rem;
+}
 
-    padding: 20px 10px 15px 5px;
+header {
+  background-color: var(--color-acento);
+  color: white;
+  padding: 40px var(--spacing);
+  text-align: center;
+}
 
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    min-height: 100vh;
+header h1 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 40px; 
+  padding: 40px var(--spacing);
+  max-width: 900px; 
+  margin: 0 auto;
+}
+
+section {
+  background-color: var(--fondo-tarjeta);
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.tabla-bonita {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.tabla-bonita th, .tabla-bonita td {
+  border-bottom: 1px solid #e2e8f0;
+  padding: 15px 10px;
+  text-align: left;
+}
+
+.tabla-bonita th {
+  background-color: #f1f5f9; 
+  color: var(--texto-principal);
+  font-weight: 600;
+  border-radius: 6px 6px 0 0; 
 }
 
 /*
@@ -27,49 +111,6 @@ unidades de medida
     fr: es una fraccion pero de un grid
     rem: relativo igual a la fuente del dispositivo y al tamaño del contenedor
 */
-
-:root{
-    --primary-color: #0056b3;
-    --secondary-color: #e2f0ff;
-    --text-color: #333;
-    --border-radius: 8px;
-    --spacing: 20px;
-    --bg-color: #f4f4f9;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-header{
-    background-color: var(--primary-color);
-    color:white;
-    padding: var(--spacing);
-    text-align: center;
-}
-
-header h1{
-    color:  white;
-    margin-bottom: 5px;
-}
-
-nav{
-    display:  flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-nav a{
-    color: white;
-    text-decoration: none;
-    padding: 5px 10px;
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
-}
-
-nav a:hover{
-    background-color: rgba(255, 255, 255, 0.2);
-}
 
 /*
 pseudo clases
@@ -89,53 +130,3 @@ pseudo elementos
         ::after: injecta contenido despues
         :: first.-letter: para la primera letra
 */
-
-main {
-    display: grid;
-    grid-template-rows: 1fr;
-    gap: var(--spacing);
-    padding: var(--spacing);
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-section{
-    background-color: #fff;
-    padding: var(--spacing);
-    border-radius: var(--border-radius);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-}
-
-h1, h2, h3 {
-  color: #1e3a8a; 
-}
-
-.foto-perfil{
-    float: right;
-    margin: 15px;
-    border-radius: 50%;
-    border: 3px solid var(--primary-color);
-}
-
-p, .subtitulo {
-  color: #2563eb; 
-}
-
-#sobre_mi, #formacion, #habilidades, #proyectos, #contacto{
-    background-color: #f4e4d1;
-    padding: 20px 10px 15px 5px;
-    margin: 20px 10px 15px 5px;
-    border-radius: 8px;
-
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.tabla-bonita th, .tabla-bonita td {
-    border: 1px solid black;
-    padding: 10px;
-    text-align: left;
-}
-
-.tabla-bonita th{   background-color: #F7F4EF;
-    color: #000000;
-}
